@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>vue_cli3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+    <script type="text/javascript">
+      (function(doc, win) {
+          var basicWidth = window.basicWidth || 750;
+          var minWidth = 320;
+          var htmlElement = doc.documentElement;
+          var dpr = parseInt(window.devicePixelRatio || 1, 10); 
+          var recalc = function() {
+              var clientWidth = htmlElement.clientWidth || (basicWidth / 2);
+              window.rootFontSize = 100 * (clientWidth / basicWidth);
+              clientWidth = clientWidth < minWidth? minWidth : clientWidth;
+              htmlElement.style.fontSize = 100 * (clientWidth / basicWidth) + 'px';
+              htmlElement.setAttribute("data-dpi", dpr);
+          };
+          recalc();
+          if (!win.addEventListener) return;
+          win.addEventListener('resize', recalc, false);
+      })(document, window);
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but vue_cli3 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script src="https://cdn-sdx.yunjiaplus.com/static/js/lib/sdk/jsapi-yunplus-1.0.0.min.js?"></script>
+  </body>
+</html>
